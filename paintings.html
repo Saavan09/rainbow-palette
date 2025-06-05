@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <!-- Add this in your <head> if not already included -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+    </script>
+    <title>Rainbow Palette</title>
+</head>
+
+<body>
+
+    <!--navbar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="#" class="navbar-item">
+                <i class="fas fa-palette"></i>
+                <span><strong>RAINBOW PALETTE</strong></span>
+            </a>
+
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Home</a>
+                <a class="navbar-item" href="paintings.html">Paintings</a>
+                <a class="navbar-item" href="crafts.html">Crafts</a>
+                <a class="navbar-item" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">Paintings</h1>
+
+            <div class="buttons is-centered mb-4" id="buttons">
+                <button class="button is-info" id="horizontal-button">Horizontal</button>
+                <button class="button is-primary" id="vertical-button">Vertical</button>
+            </div>
+
+            <p class="has-text-centered mb-5">
+                Use the buttons above to show paintings that match the criteria! To view the details of a painting you
+                like, click on it.
+            </p>
+
+            <div id="paintings-container" class="columns is-multiline"></div>
+            <!-- dynamically injected by JS -->
+        </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

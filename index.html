@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainbow Palette</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    function toggleNav() {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('.navbar-menu');
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('.navbar-menu');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="#" class="navbar-item">
+        <i class="fas fa-palette"></i>
+        <span><strong>RAINBOW PALETTE</strong></span>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="index.html">Home</a>
+        <a class="navbar-item" href="paintings.html">Paintings</a>
+        <a class="navbar-item" href="crafts.html">Crafts</a>
+        <a class="navbar-item" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="title is-3 has-text-centered">Rainbow Palette Art Studio</h1>
+
+      <div class="box" id="box">
+        <div class="columns is-vcentered is-variable is-6 is-multiline">
+          <!-- Image Column -->
+          <div class="column is-12-mobile is-4-tablet is-3-desktop">
+            <figure class="image">
+              <img src="suniti.jpg" alt="Suniti Tandon">
+            </figure> 
+          </div>
+
+          <!-- Text Column -->
+          <div class="column is-12-mobile is-8-tablet is-9-desktop">
+            <h3 class="subtitle is-4">Artist: Suniti Tandon</h3>
+            <p>
+              I'm Suniti Tandon, the artist behind Rainbow Palette – an art studio born out of my lifelong love for
+              bright,
+              vibrant colors. I believe every hue holds meaning, and I love exploring them to capture landscapes and the
+              quiet beauty of nature. No matter my mood, I pour emotion into my pieces, so they are very dear to me. I
+              work
+              primarily in acrylic on stretched canvas, creating from my home in Virginia, USA. Thanks for visiting! Do
+              stay
+              awhile.
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

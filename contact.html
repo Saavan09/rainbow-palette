@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Palette</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="#" class="navbar-item">
+                <i class="fas fa-palette"></i>
+                <span><strong>RAINBOW PALETTE</strong></span>
+            </a>
+
+            <a role="button" class="navbar-burger" onclick="toggleNav()" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">Home</a>
+                <a class="navbar-item" href="paintings.html">Paintings</a>
+                <a class="navbar-item" href="crafts.html">Crafts</a>
+                <a class="navbar-item" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <main class="section">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">Contact</h1>
+
+            <div class="box" id="box">
+                <form action="https://formsubmit.co/3ddbf04ef3734932b3c6d8b9a2674d88" method="POST">
+                    <!-- Hidden inputs -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://google.com">
+
+                    <!-- Name field -->
+                    <div class="field">
+                        <label class="label" for="name">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" id="name" name="name" required placeholder="Your name" />
+                        </div>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="field">
+                        <label class="label" for="email">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" id="email" name="email" required
+                                placeholder="you@example.com" />
+                        </div>
+                    </div>
+
+                    <!-- Painting Interest dropdown -->
+                    <div class="field">
+                        <label class="label" for="painting">Painting You're Interested In</label>
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select id="painting" name="painting" required>
+                                    <option value="">-- Please choose one --</option>
+                                    <option value="Home Is Where the Heart Is">Home Is Where the Heart Is - 14 x 11in
+                                    </option>
+                                    <option value="Sounds of Nature">Sounds of Nature - 14 x 11in</option>
+                                    <option value="By the Ocean">By the Ocean - 20 x 16in</option>
+                                    <option value="Once Upon a Time">Once Upon a Time - 14 x 11in</option>
+                                    <option value="Cozy Cottage">Cozy Cottage - 20 x 16in</option>
+                                    <option value="Yellow Beauties">Yellow Beauties - 14 x 11in</option>
+                                    <option value="Lakeside">Lakeside - 20 x 16in</option>
+                                    <option value="Street Light">Street Light - 11 x 14in</option>
+                                    <option value="Serenity">Serenity - 16 x 20</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Message field -->
+                    <div class="field">
+                        <label class="label" for="message">Message (optional)</label>
+                        <div class="control">
+                            <textarea class="textarea" id="message" name="message" rows="6"
+                                placeholder="Let me know if you have any questions or queries!"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="field">
+                        <div class="control">
+                            <button type="submit" class="button is-fullwidth is-primary">
+                                <strong>Send Message</strong>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
