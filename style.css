@@ -7,7 +7,7 @@ body {
 .navbar {
   background-color: #fce1e4 !important;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-  padding: 0.5rem 3rem; /* less vertical padding */
+  padding: 0.5rem 3rem;
 }
 
 .navbar-brand strong {
@@ -23,7 +23,7 @@ body {
   color: #9b5a64 !important;
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 0.7rem 1.5rem; /* reduced padding */
+  padding: 0.7rem 1.5rem; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -131,7 +131,7 @@ body {
 }
 
 .navbar-item i {
-  font-size: 1.5em; /* slightly larger for better visual balance */
+  font-size: 1.5em;
 }
 
 .popup-content * {
@@ -139,12 +139,12 @@ body {
   padding: 0;
 }
 
-/* Ensure navbar items stack vertically on small screens */
+/* ensure navbar items stack vertically on small screens */
 .navbar-menu {
   flex-direction: column;
 }
 
-/* Keep navbar compact on mobile */
+/* keep navbar compact on mobile */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 1rem;

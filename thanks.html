@@ -8,16 +8,13 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 
   <script>
     function toggleNav() {
-      const burger = document.querySelector('.navbar-burger');
-      const menu = document.querySelector('.navbar-menu');
-      burger.classList.toggle('is-active');
-      menu.classList.toggle('is-active');
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +39,7 @@
         <span><strong>RAINBOW PALETTE</strong></span>
       </a>
 
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <a role="button" class="navbar-burger" onclick="toggleNav()" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -59,34 +56,13 @@
     </div>
   </nav>
 
+  <!-- main content -->
   <main class="section">
     <div class="container">
-      <h1 class="title is-3 has-text-centered">Rainbow Palette Art Studio</h1>
-
       <div class="box" id="box">
-        <div class="columns is-vcentered is-variable is-6 is-multiline">
-          <div class="column is-12-mobile is-4-tablet is-3-desktop">
-            <figure class="image">
-              <img src="suniti.jpg" alt="Suniti Tandon">
-            </figure> 
-          </div>
-
-          <div class="column is-12-mobile is-8-tablet is-9-desktop">
-            <h3 class="subtitle is-4">Artist: Suniti Tandon</h3>
-            <p>
-              I'm Suniti Tandon, the artist behind Rainbow Palette – an art studio born out of my lifelong love for
-              bright,
-              vibrant colors. I believe every hue holds meaning, and I love exploring them to capture landscapes and the
-              quiet beauty of nature. No matter my mood, I pour emotion into my pieces, so they are very dear to me. I
-              work
-              primarily in acrylic on stretched canvas, creating from my home in Virginia, USA. Thanks for visiting! Do
-              stay
-              awhile.
-            </p>
-          </div>
-        </div>
+        <p>Thank you for submitting the form! I will get back to you as soon as possible. In the meantime, any shares are appreciated. :)</p>
       </div>
-
+    </div>
   </main>
 
   <script src="script.js"></script>
